@@ -5,7 +5,7 @@ import os
 import time
 from collections import OrderedDict
 from datetime import datetime
-from typing import Optional, Tuple
+from typing import Optional
 
 def parse_year(dt_str: str) -> int:
     """
