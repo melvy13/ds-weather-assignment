@@ -51,20 +51,31 @@ class WriterCache:
         # Tracks (rows_written, chunk_idx) per year
         self._year_state: dict[int, tuple[int, int]] = {}
 
+        # Tracks the last date seen for this year (to prevent splitting mid-day)
+        self._last_date_seen: dict[int, str] = {}
+
         # LRU cache: year -> (file handle, csv writer)
         self._cache: "OrderedDict[int, tuple[object, csv.DictWriter]]" = OrderedDict()
 
-    def get_writer(self, year: int) -> csv.DictWriter:
+    def get_writer(self, year: int, current_date_str: str) -> csv.DictWriter:
         rows_written, chunk_idx = self._year_state.get(year, (0, 0))
+        last_date = self._last_date_seen.get(year, None)
 
-        # Roll over to a new file if max_rows_per_file reached
+        # Roll over to a new file if max_rows_per_file reached & date changed
+        should_split = False
         if self.max_rows_per_file and rows_written >= self.max_rows_per_file:
+            if current_date_str != last_date:
+                should_split = True
+        
+        if should_split:
             # close existing file if open
             if year in self._cache:
                 fh, _ = self._cache.pop(year)
                 fh.close()
             chunk_idx += 1
             rows_written = 0
+
+        self._last_date_seen[year] = current_date_str
 
         if year in self._cache:
             fh, writer = self._cache.pop(year)
@@ -149,8 +160,11 @@ def split_csv_by_year(
                     print(f"Processed {total:,} rows... ({speed:.0f} rows/sec)")
 
                 try:
-                    year = parse_year(row.get(datetime_col, ""))
-                    writer = cache.get_writer(year)
+                    raw_date = row.get(datetime_col, "")
+                    year = parse_year(raw_date)
+                    date_only_str = raw_date[:10]
+
+                    writer = cache.get_writer(year, date_only_str)
                     writer.writerow(row)
                     cache.increment_row(year)
                 except Exception as e:

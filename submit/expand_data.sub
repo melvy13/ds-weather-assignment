@@ -1,7 +1,7 @@
-# expand_data.sub -- Expand data to about 10GB to simulate big data
+# expand_data.sub -- Expand data to about 5GB to simulate big data
 
 executable = /usr/bin/python3
-arguments = /mnt/data/use_cases/code/expand_data.py /mnt/data/use_cases/clean_weather.csv /mnt/data/use_cases/expanded_weather.csv
+arguments = /mnt/data/use_cases/code/expand_data.py /mnt/data/use_cases/clean_weather.csv /mnt/data/use_cases/expanded_weather.csv 5
 
 # Logging
 output = /mnt/data/use_cases/logs/expand_data.out

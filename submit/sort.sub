@@ -1,0 +1,15 @@
+# sort.sub -- Sort the expanded data from oldest to newest datetime
+
+executable = /bin/bash
+arguments = /mnt/data/use_cases/code/task_sort.sh
+
+# Logging
+output = /mnt/data/use_cases/logs/sort.out
+error  = /mnt/data/use_cases/logs/sort.err
+log    = /mnt/data/use_cases/logs/sort.log
+
+# Resources
+request_cpus   = 1
+request_memory = 6G
+
+queue

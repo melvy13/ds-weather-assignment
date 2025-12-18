@@ -2,7 +2,7 @@
 
 executable = /usr/bin/python3
 arguments = /mnt/data/use_cases/code/split_data.py \
-            --input /mnt/data/use_cases/expanded_weather.csv \
+            --input /mnt/data/use_cases/sorted_weather.csv \
             --outdir /mnt/data/use_cases/split \
             --max-open 30 \
             --max-rows-per-file 2000000
