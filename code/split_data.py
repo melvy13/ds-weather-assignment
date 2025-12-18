@@ -112,7 +112,7 @@ def split_csv_by_year(
     total = 0
     bad = 0
     start_time = time.time()
-    PROGRESS_INTERVAL = 500000 
+    PROGRESS_INTERVAL = 1000000 
 
     print(f"Starting split process for: {input_csv}")
     print(f"Output directory: {out_dir}")
