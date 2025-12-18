@@ -1,0 +1,15 @@
+# initial_clean.sub -- Initial cleaning before expansion to reduce bad data synthesization
+
+executable = /usr/bin/python3
+arguments = /mnt/data/use_cases/code/initial_clean.py /mnt/data/use_cases/full_weather.csv /mnt/data/use_cases/clean_weather.csv
+
+# Logging
+output = /mnt/data/use_cases/logs/initial_clean.out
+error  = /mnt/data/use_cases/logs/initial_clean.err
+log    = /mnt/data/use_cases/logs/initial_clean.log
+
+# Resources
+request_cpus   = 1
+request_memory = 6G
+
+queue

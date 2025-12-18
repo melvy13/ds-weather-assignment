@@ -1,0 +1,11 @@
+# csv_cleanup.sub -- Remove clean & expanded weather csv to prevent insufficient disk space
+
+executable = /bin/bash
+arguments = /mnt/data/use_cases/code/csv_cleanup.sh
+
+# Logging
+output = /mnt/data/use_cases/logs/csv_cleanup.out
+error  = /mnt/data/use_cases/logs/csv_cleanup.err
+log    = /mnt/data/use_cases/logs/csv_cleanup.log
+
+queue

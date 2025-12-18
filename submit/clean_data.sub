@@ -1,0 +1,15 @@
+# clean_data.sub -- Distributed cleaning of split weather CSVs
+
+executable = /usr/bin/python3
+arguments = /mnt/data/use_cases/code/clean_data.py $(file) /mnt/data/use_cases/clean
+
+# Logging
+log    = /mnt/data/use_cases/logs/clean_job_$(Process).log
+output = /mnt/data/use_cases/logs/clean_job_$(Process).out
+error  = /mnt/data/use_cases/logs/clean_job_$(Process).err
+
+# Resources
+request_cpus   = 1
+request_memory = 3G
+
+queue file matching /mnt/data/use_cases/split/*.csv

@@ -1,0 +1,19 @@
+# split_data.sub -- Split data to parts for parallel processing
+
+executable = /usr/bin/python3
+arguments = /mnt/data/use_cases/code/split_data.py \
+            --input /mnt/data/use_cases/expanded_weather.csv \
+            --outdir /mnt/data/use_cases/split \
+            --max-open 30 \
+            --max-rows-per-file 2000000
+
+# Logging
+output = /mnt/data/use_cases/logs/split_data.out
+error  = /mnt/data/use_cases/logs/split_data.err
+log    = /mnt/data/use_cases/logs/split_data.log
+
+# Resources
+request_cpus   = 1
+request_memory = 6G
+
+queue
