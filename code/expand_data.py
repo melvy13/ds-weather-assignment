@@ -18,9 +18,9 @@ def expand_data(input_file, output_file, target_size_gb, chunk_size):
     print(f"Reading input file: {input_file}...")
     df = pd.read_csv(input_file)
     
-    # Calculate how many duplicates we need (exceed target size)
+    # Calculate how many duplicates we need
     original_size_gb = os.path.getsize(input_file) / (1024**3)
-    num_duplicates = int(target_size_gb / original_size_gb) + 1
+    num_duplicates = int(target_size_gb / original_size_gb)
     
     print(f"\n{'='*60}")
     print(f"SENSOR DUPLICATION SETUP")
