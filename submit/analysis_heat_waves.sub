@@ -1,0 +1,15 @@
+# analysis_heat_waves.sub -- Detect heat waves
+
+executable = /usr/bin/python3
+arguments = /mnt/data/use_cases/code/task_heat_waves.py $(file) /mnt/data/use_cases/analysis 28 3
+
+# Logging
+log    = /mnt/data/use_cases/logs/analysis_HW_$(Process).log
+output = /mnt/data/use_cases/logs/analysis_HW_$(Process).out
+error  = /mnt/data/use_cases/logs/analysis_HW_$(Process).err
+
+# Resources
+request_cpus   = 1
+request_memory = 2G
+
+queue file matching /mnt/data/use_cases/clean/*.csv

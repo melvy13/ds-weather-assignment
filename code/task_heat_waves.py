@@ -1,5 +1,6 @@
 import sys
 import pandas as pd
+import os
  
 def find_heat_waves(input_file, output_file, threshold, min_days): 
     df = pd.read_csv(input_file)
@@ -49,7 +50,7 @@ def find_heat_waves(input_file, output_file, threshold, min_days):
     for state, state_df in daily.groupby('state'):
         state_df = state_df.sort_values('date').reset_index(drop=True)
 
-        # ADD THESE DIAGNOSTIC LINES HERE:
+        # Diagnostic lines
         print(f"\n=== State: {state} ===")
         print(f"Date range: {state_df['date'].min()} to {state_df['date'].max()}")
         print(f"Temp range: {state_df['daily_avg_temp'].min():.2f}°C to {state_df['daily_avg_temp'].max():.2f}°C")
@@ -110,12 +111,20 @@ if __name__ == "__main__":
     MIN_DAYS = 3
 
     if len(sys.argv) <= 2:
-        print("Usage: python task_heat_waves.py <input_csv> <output_csv> <threshold [default 35]> <min_days [default 3]>")
+        print("Usage: python task_heat_waves.py <input_csv> <output_dir> <threshold [default 35]> <min_days [default 3]>")
         sys.exit(1)
 
     if len(sys.argv) > 3:
         THRESHOLD = float(sys.argv[3])
     if len(sys.argv) > 4:
         MIN_DAYS = int(sys.argv[4])
+
+    input_file = sys.argv[1]
+    output_dir = sys.argv[2]
     
-    find_heat_waves(sys.argv[1], sys.argv[2], THRESHOLD, MIN_DAYS)
+    base_name = os.path.basename(input_file)
+    new_name = base_name.replace("clean_", "heat_waves_", 1)
+
+    output_file = os.path.join(output_dir, new_name)
+    
+    find_heat_waves(input_file, output_file, THRESHOLD, MIN_DAYS)

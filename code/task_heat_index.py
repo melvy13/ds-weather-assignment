@@ -1,6 +1,7 @@
 import sys
 import pandas as pd
 import numpy as np
+import os
 
 def calculate_heat_index(temp_c, humidity):
     """
@@ -119,12 +120,15 @@ def calculate_monthly_heat_index(input_file, output_file):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python task_heat_index.py <input_csv> <output_csv>")
-        print("\nCalculates monthly heat index statistics (min, max, avg) by state.")
-        print("Heat index combines temperature and humidity to measure apparent temperature.")
+        print("Usage: python task_heat_index.py <input_csv> <output_dir>")
         sys.exit(1)
     
-    input_csv = sys.argv[1]
-    output_csv = sys.argv[2]
+    input_file = sys.argv[1]
+    output_dir = sys.argv[2]
+
+    base_name = os.path.basename(input_file)
+    new_name = base_name.replace("clean_", "heat_index_", 1)
+
+    output_file = os.path.join(output_dir, new_name)
     
-    calculate_monthly_heat_index(input_csv, output_csv)
+    calculate_monthly_heat_index(input_file, output_file)
