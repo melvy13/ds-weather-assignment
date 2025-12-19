@@ -1,0 +1,98 @@
+# --- Sample 1 ---
+Disk I/O (Read) Time: 3.7952 seconds
+Rows after reading CSV: 2009740
+Calculating heat index for all rows...
+Aggregating monthly statistics by state...
+Calculation Time: 51.6655 seconds
+Total Execution Time: 55.4712 seconds
+
+Monthly heat index calculation completed.
+Total records: 40
+
+Sample output:
+          state  year  month  ...  max_heat_index  avg_heat_index  sample_count
+0         Johor  2021     10  ...           59.87           30.77         18056
+1         Johor  2021     11  ...           61.44           30.51         60348
+2         Johor  2021     12  ...           59.18           31.23         65112
+3         Kedah  2021     10  ...           49.84           31.92          1728
+4         Kedah  2021     11  ...           47.81           30.59          5760
+5         Kedah  2021     12  ...           47.14           30.43          5568
+6      Kelantan  2021     10  ...           45.75           32.03           864
+7      Kelantan  2021     11  ...           45.85           29.25          2880
+8      Kelantan  2021     12  ...           40.06           28.96          2784
+9  Kuala Lumpur  2021     10  ...           90.91           33.63         43236
+
+[10 rows x 7 columns]
+
+=== Overall Statistics ===
+States covered: 14
+Date range: 2021-10 to 2021-12
+Highest heat index recorded: 142.33°C
+Lowest heat index recorded: 9.71°C
+Average heat index across all months: 30.75°C
+
+# --- Sample 2 ---
+Disk I/O (Read) Time: 4.3427 seconds
+Rows after reading CSV: 2022972
+Calculating heat index for all rows...
+Aggregating monthly statistics by state...
+Calculation Time: 53.6296 seconds
+Total Execution Time: 57.9823 seconds
+
+Monthly heat index calculation completed.
+Total records: 32
+
+Sample output:
+          state  year  month  ...  max_heat_index  avg_heat_index  sample_count
+0         Johor  2023      7  ...          121.05           33.75        106860
+1         Johor  2023      8  ...          141.61           36.71         43840
+2         Kedah  2023      7  ...           52.56           32.99         29708
+3         Kedah  2023      8  ...           51.18           32.12         15832
+4      Kelantan  2023      7  ...           47.63           33.79          2816
+5      Kelantan  2023      8  ...           46.76           32.19           960
+6  Kuala Lumpur  2023      7  ...           51.50           32.05        292628
+7  Kuala Lumpur  2023      8  ...           53.44           32.75         86824
+8        Labuan  2023      7  ...           43.77           30.23          2816
+9        Labuan  2023      8  ...           44.16           31.34           960
+
+[10 rows x 7 columns]
+
+=== Overall Statistics ===
+States covered: 16
+Date range: 2023-07 to 2023-08
+Highest heat index recorded: 141.61°C
+Lowest heat index recorded: 14.01°C
+Average heat index across all months: 32.68°C
+
+# --- Sample 3 ---
+Disk I/O (Read) Time: 3.9009 seconds
+Rows after reading CSV: 2005388
+Calculating heat index for all rows...
+Aggregating monthly statistics by state...
+Calculation Time: 52.3659 seconds
+Total Execution Time: 56.2773 seconds
+
+Monthly heat index calculation completed.
+Total records: 78
+
+Sample output:
+   state  year  month  ...  max_heat_index  avg_heat_index  sample_count
+0  Johor  2020      5  ...           75.27           34.57          3980
+1  Johor  2020      6  ...           81.26           34.59         23088
+2  Johor  2020      7  ...           47.99           29.19         25552
+3  Johor  2020      8  ...           52.71           30.19         30948
+4  Johor  2020      9  ...           49.77           29.20         37732
+5  Johor  2020     10  ...           53.69           31.49         23004
+6  Kedah  2020      5  ...           49.83           32.93           576
+7  Kedah  2020      6  ...           50.82           33.81          5640
+8  Kedah  2020      7  ...           48.01           32.33          5952
+9  Kedah  2020      8  ...           51.21           34.16          5916
+
+[10 rows x 7 columns]
+
+=== Overall Statistics ===
+States covered: 13
+Date range: 2020-05 to 2020-10
+Highest heat index recorded: 115.87°C
+Lowest heat index recorded: 20.34°C
+Average heat index across all months: 32.29°C

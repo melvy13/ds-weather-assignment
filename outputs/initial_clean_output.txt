@@ -1,0 +1,359 @@
+Starting initial CSV cleaning...
+
+Chunk 1: read 500,000 rows
+  ├─ removed 1,745 invalid rows
+  ├─ remaining 498,255 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 498,255 rows
+     elapsed time: 4.1s
+
+Chunk 2: read 500,000 rows
+  ├─ removed 17,702 invalid rows
+  ├─ remaining 482,298 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 980,553 rows
+     elapsed time: 8.2s
+
+Chunk 3: read 500,000 rows
+  ├─ removed 64,316 invalid rows
+  ├─ remaining 435,684 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 1,416,237 rows
+     elapsed time: 11.3s
+
+Chunk 4: read 500,000 rows
+  ├─ removed 62,744 invalid rows
+  ├─ remaining 437,256 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 1,853,493 rows
+     elapsed time: 14.9s
+
+Chunk 5: read 500,000 rows
+  ├─ removed 88,763 invalid rows
+  ├─ remaining 411,237 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 2,264,730 rows
+     elapsed time: 18.8s
+
+Chunk 6: read 500,000 rows
+  ├─ removed 96,639 invalid rows
+  ├─ remaining 403,361 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 2,668,091 rows
+     elapsed time: 22.1s
+
+Chunk 7: read 500,000 rows
+  ├─ removed 270,470 invalid rows
+  ├─ remaining 229,530 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 2,897,621 rows
+     elapsed time: 24.3s
+
+Chunk 8: read 500,000 rows
+  ├─ removed 279,359 invalid rows
+  ├─ remaining 220,641 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 3,118,262 rows
+     elapsed time: 26.5s
+
+Chunk 9: read 500,000 rows
+  ├─ removed 278,104 invalid rows
+  ├─ remaining 221,896 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 3,340,158 rows
+     elapsed time: 28.7s
+
+Chunk 10: read 500,000 rows
+  ├─ removed 27,258 invalid rows
+  ├─ remaining 472,742 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 3,812,900 rows
+     elapsed time: 32.4s
+
+Chunk 11: read 500,000 rows
+  ├─ removed 271,113 invalid rows
+  ├─ remaining 228,887 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 4,041,787 rows
+     elapsed time: 34.4s
+
+Chunk 12: read 500,000 rows
+  ├─ removed 325,330 invalid rows
+  ├─ remaining 174,670 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 4,216,457 rows
+     elapsed time: 36.2s
+
+Chunk 13: read 500,000 rows
+  ├─ removed 284,470 invalid rows
+  ├─ remaining 215,530 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 4,431,987 rows
+     elapsed time: 38.3s
+
+Chunk 14: read 500,000 rows
+  ├─ removed 251,641 invalid rows
+  ├─ remaining 248,359 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 4,680,346 rows
+     elapsed time: 40.6s
+
+Chunk 15: read 500,000 rows
+  ├─ removed 227,206 invalid rows
+  ├─ remaining 272,794 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 4,953,140 rows
+     elapsed time: 43.1s
+
+Chunk 16: read 500,000 rows
+  ├─ removed 176,259 invalid rows
+  ├─ remaining 323,741 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 5,276,881 rows
+     elapsed time: 46.4s
+
+Chunk 17: read 500,000 rows
+  ├─ removed 175,044 invalid rows
+  ├─ remaining 324,956 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 5,601,837 rows
+     elapsed time: 49.5s
+
+Chunk 18: read 500,000 rows
+  ├─ removed 146,314 invalid rows
+  ├─ remaining 353,686 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 5,955,523 rows
+     elapsed time: 52.9s
+
+Chunk 19: read 500,000 rows
+  ├─ removed 171,041 invalid rows
+  ├─ remaining 328,959 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 6,284,482 rows
+     elapsed time: 56.2s
+
+Chunk 20: read 500,000 rows
+  ├─ removed 159,401 invalid rows
+  ├─ remaining 340,599 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 6,625,081 rows
+     elapsed time: 59.6s
+
+Chunk 21: read 500,000 rows
+  ├─ removed 133,531 invalid rows
+  ├─ remaining 366,469 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 6,991,550 rows
+     elapsed time: 63.1s
+
+Chunk 22: read 500,000 rows
+  ├─ removed 152,568 invalid rows
+  ├─ remaining 347,432 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 7,338,982 rows
+     elapsed time: 66.5s
+
+Chunk 23: read 500,000 rows
+  ├─ removed 124,878 invalid rows
+  ├─ remaining 375,122 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 7,714,104 rows
+     elapsed time: 70.2s
+
+Chunk 24: read 500,000 rows
+  ├─ removed 107,079 invalid rows
+  ├─ remaining 392,921 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 8,107,025 rows
+     elapsed time: 74.0s
+
+Chunk 25: read 500,000 rows
+  ├─ removed 102,606 invalid rows
+  ├─ remaining 397,394 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 8,504,419 rows
+     elapsed time: 78.1s
+
+Chunk 26: read 500,000 rows
+  ├─ removed 99,016 invalid rows
+  ├─ remaining 400,984 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 8,905,403 rows
+     elapsed time: 82.6s
+
+Chunk 27: read 500,000 rows
+  ├─ removed 99,628 invalid rows
+  ├─ remaining 400,372 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 9,305,775 rows
+     elapsed time: 86.7s
+
+Chunk 28: read 500,000 rows
+  ├─ removed 80,121 invalid rows
+  ├─ remaining 419,879 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 9,725,654 rows
+     elapsed time: 90.8s
+
+Chunk 29: read 500,000 rows
+  ├─ removed 89,554 invalid rows
+  ├─ remaining 410,446 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 10,136,100 rows
+     elapsed time: 94.9s
+
+Chunk 30: read 500,000 rows
+  ├─ removed 100,261 invalid rows
+  ├─ remaining 399,739 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 10,535,839 rows
+     elapsed time: 98.6s
+
+Chunk 31: read 500,000 rows
+  ├─ removed 79,784 invalid rows
+  ├─ remaining 420,216 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 10,956,055 rows
+     elapsed time: 102.2s
+
+Chunk 32: read 500,000 rows
+  ├─ removed 90,125 invalid rows
+  ├─ remaining 409,875 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 11,365,930 rows
+     elapsed time: 106.1s
+
+Chunk 33: read 500,000 rows
+  ├─ removed 93,094 invalid rows
+  ├─ remaining 406,906 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 11,772,836 rows
+     elapsed time: 109.6s
+
+Chunk 34: read 500,000 rows
+  ├─ removed 83,478 invalid rows
+  ├─ remaining 416,522 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 12,189,358 rows
+     elapsed time: 113.4s
+
+Chunk 35: read 500,000 rows
+  ├─ removed 76,945 invalid rows
+  ├─ remaining 423,055 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 12,612,413 rows
+     elapsed time: 117.1s
+
+Chunk 36: read 500,000 rows
+  ├─ removed 74,325 invalid rows
+  ├─ remaining 425,675 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 13,038,088 rows
+     elapsed time: 121.1s
+
+Chunk 37: read 500,000 rows
+  ├─ removed 64,471 invalid rows
+  ├─ remaining 435,529 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 13,473,617 rows
+     elapsed time: 125.0s
+
+Chunk 38: read 500,000 rows
+  ├─ removed 61,885 invalid rows
+  ├─ remaining 438,115 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 13,911,732 rows
+     elapsed time: 129.1s
+
+Chunk 39: read 500,000 rows
+  ├─ removed 55,785 invalid rows
+  ├─ remaining 444,215 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 14,355,947 rows
+     elapsed time: 133.1s
+
+Chunk 40: read 500,000 rows
+  ├─ removed 62,681 invalid rows
+  ├─ remaining 437,319 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 14,793,266 rows
+     elapsed time: 137.5s
+
+Chunk 41: read 500,000 rows
+  ├─ removed 62,971 invalid rows
+  ├─ remaining 437,029 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 15,230,295 rows
+     elapsed time: 141.6s
+
+Chunk 42: read 500,000 rows
+  ├─ removed 60,230 invalid rows
+  ├─ remaining 439,770 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 15,670,065 rows
+     elapsed time: 146.0s
+
+Chunk 43: read 500,000 rows
+  ├─ removed 57,466 invalid rows
+  ├─ remaining 442,534 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 16,112,599 rows
+     elapsed time: 150.1s
+
+Chunk 44: read 500,000 rows
+  ├─ removed 65,854 invalid rows
+  ├─ remaining 434,146 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 16,546,745 rows
+     elapsed time: 154.2s
+
+Chunk 45: read 500,000 rows
+  ├─ removed 71,697 invalid rows
+  ├─ remaining 428,303 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 16,975,048 rows
+     elapsed time: 157.9s
+
+Chunk 46: read 500,000 rows
+  ├─ removed 77,066 invalid rows
+  ├─ remaining 422,934 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 17,397,982 rows
+     elapsed time: 161.6s
+
+Chunk 47: read 500,000 rows
+  ├─ removed 76,671 invalid rows
+  ├─ remaining 423,329 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 17,821,311 rows
+     elapsed time: 165.5s
+
+Chunk 48: read 500,000 rows
+  ├─ removed 82,799 invalid rows
+  ├─ remaining 417,201 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 18,238,512 rows
+     elapsed time: 169.0s
+
+Chunk 49: read 500,000 rows
+  ├─ removed 80,429 invalid rows
+  ├─ remaining 419,571 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 18,658,083 rows
+     elapsed time: 172.7s
+
+Chunk 50: read 19,715 rows
+  ├─ removed 2,730 invalid rows
+  ├─ remaining 16,985 rows
+  ├─ downcasting 6 float columns
+  └─ total written so far: 18,675,068 rows
+     elapsed time: 172.9s
+
+============================================================
+Done cleaning!
+============================================================
+Total rows read: 24,519,715
+Total rows written: 18,675,068
+Total time: 172.9s
+============================================================

@@ -1,0 +1,49 @@
+# --- Sample 1 ---
+Starting job for: /mnt/data/use_cases/split/weather_2005_part_00.csv
+  -> Filling gaps forward (ffill)... (Missing values: 193680)
+  -> Filling start gaps backward (bfill)... (Remaining missing: 0)
+  -> No remaining NaNs to fill with 0.
+  -> Fixing 22967 abnormal values in 'humidity' (Capping to 0-100)
+  -> Fixing 8 abnormal values in 'wind_speed' (Capping to 0-150)
+
+============================================================
+Processing Complete!
+============================================================
+File: /mnt/data/use_cases/split/weather_2005_part_00.csv
+Rows: 965496
+Time Taken: 13.3932 seconds
+Saved to: /mnt/data/use_cases/clean/clean_2005_part_00.csv
+============================================================
+
+# --- Sample 2 ---
+Starting job for: /mnt/data/use_cases/split/weather_2022_part_01.csv
+  -> Filling gaps forward (ffill)... (Missing values: 149084)
+  -> Filling start gaps backward (bfill)... (Remaining missing: 0)
+  -> No remaining NaNs to fill with 0.
+  -> Fixing 131405 abnormal values in 'humidity' (Capping to 0-100)
+
+============================================================
+Processing Complete!
+============================================================
+File: /mnt/data/use_cases/split/weather_2022_part_01.csv
+Rows: 2003812
+Time Taken: 29.2297 seconds
+Saved to: /mnt/data/use_cases/clean/clean_2022_part_01.csv
+============================================================
+
+# --- Sample 3 ---
+Starting job for: /mnt/data/use_cases/split/weather_2024_part_04.csv
+  -> Filling gaps forward (ffill)... (Missing values: 493372)
+  -> Filling start gaps backward (bfill)... (Remaining missing: 0)
+  -> No remaining NaNs to fill with 0.
+  -> Fixing 113896 abnormal values in 'humidity' (Capping to 0-100)
+  -> Fixing 188 abnormal values in 'wind_speed' (Capping to 0-150)
+
+============================================================
+Processing Complete!
+============================================================
+File: /mnt/data/use_cases/split/weather_2024_part_04.csv
+Rows: 2011916
+Time Taken: 24.6214 seconds
+Saved to: /mnt/data/use_cases/clean/clean_2024_part_04.csv
+============================================================

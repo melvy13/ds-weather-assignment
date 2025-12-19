@@ -1,0 +1,65 @@
+===================================================
+       MALAYSIA CLIMATE RISK ANALYSIS REPORT
+===================================================
+Generated on: 2025-12-19 10:21:51 UTC
+
+------------------------------
+1. HEAT WAVES ANALYSIS
+------------------------------
+Total Heat Waves Detected: 4027
+States Affected: 16
+Longest Heat Wave: 124 days
+Avg Heat Wave Duration: 7.0 days
+Hottest Wave Avg Temp: 32.90°C
+
+Top 5 Longest Heat Waves:
+  - Kedah: 124 days (2016-01-18 to 2016-05-20) @ 29.8°C
+  - Pulau Pinang: 78 days (2016-02-19 to 2016-05-06) @ 29.2°C
+  - Perak: 76 days (2016-02-25 to 2016-05-10) @ 29.41°C
+  - Kedah: 67 days (2010-01-22 to 2010-03-29) @ 29.4°C
+  - Kedah: 65 days (2020-02-12 to 2020-04-16) @ 29.47°C
+
+Heat Waves by State (Count):
+  - Selangor: 478
+  - Pulau Pinang: 474
+  - Kuala Lumpur: 445
+  - Kedah: 411
+  - Labuan: 404
+  - Melaka: 354
+  - Perak: 251
+  - Sabah: 234
+  - Terengganu: 228
+  - Kelantan: 223
+
+------------------------------
+2. HEAT INDEX ANALYSIS (Monthly)
+------------------------------
+Total Monthly Records: 3755
+Overall Max Heat Index: 142.33°C
+Overall Min Heat Index: -3.06°C
+Overall Avg Heat Index: 31.16°C
+
+Top 5 Hottest Months (Max Heat Index):
+  - Selangor (2021-12): Max 142.33°C
+  - Johor (2023-08): Max 141.61°C
+  - Johor (2023-10): Max 138.24°C
+  - Selangor (2023-11): Max 135.63°C
+  - Selangor (2023-10): Max 134.73°C
+
+Average Heat Index by State:
+  - Negeri Sembilan: 33.61°C
+  - Kedah: 32.17°C
+  - Perlis: 32.10°C
+  - Labuan: 31.87°C
+  - Pulau Pinang: 31.80°C
+  - Kuala Lumpur: 31.69°C
+  - Selangor: 31.49°C
+  - Melaka: 31.39°C
+  - Putrajaya: 31.29°C
+  - Terengganu: 31.09°C
+  - Sabah: 31.01°C
+  - Kelantan: 30.91°C
+  - Perak: 30.88°C
+  - Pahang: 30.30°C
+  - Johor: 30.28°C
+  - Sarawak: 29.87°C
