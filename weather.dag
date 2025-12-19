@@ -1,0 +1,62 @@
+# ==========================================================
+# Distributed Climate Risk Analysis Pipeline (DAG)
+# ==========================================================
+
+# ==================================================
+# --- 1. Initial Cleaning & Expansion ---
+# Do initial cleaning & expand original csv to simulate big data
+# ==================================================
+JOB A /mnt/data/use_cases/submit/initial_clean.sub
+JOB B /mnt/data/use_cases/submit/expand_data.sub
+
+# ==================================================
+# --- 2. Sorting ---
+# Use linux sort to order the expanded data by datetime
+# ==================================================
+JOB C /mnt/data/use_cases/submit/sort.sub
+
+# ==================================================
+# --- 3. Data Splitting ---
+# Splits sorted data into smaller CSVs by year and row count
+# ==================================================
+JOB D /mnt/data/use_cases/submit/split_data.sub
+
+# ==================================================
+# --- 4. Intermediate CSV Cleaning ---
+# Remove CSVs no longer needed as they are split to a new folder
+# ==================================================
+JOB E /mnt/data/use_cases/submit/csv_cleanup.sub
+
+# ==================================================
+# --- 5. Data Cleaning ---
+# Clean in parallel for every split file
+# ==================================================
+JOB F /mnt/data/use_cases/submit/clean_data.sub
+
+# ==================================================
+# --- 6. Weather Analysis ---
+# Analyse heat index & heat waves in parallel for every split/cleaned file
+# ==================================================
+
+# 6a. Heat Index Calculation
+JOB G1 /mnt/data/use_cases/submit/analysis_heat_index.sub
+
+# 6b. Heat Wave Detection
+JOB G2 /mnt/data/use_cases/submit/analysis_heat_waves.sub
+
+# ==================================================
+# --- 7. Final Report Generation ---
+# Merge all results into a final summary report
+# ==================================================
+JOB H /mnt/data/use_cases/submit/generate_analysis.sub
+
+# ==================================================
+# DEPENDENCIES
+# ==================================================
+PARENT A CHILD B
+PARENT B CHILD C
+PARENT C CHILD D
+PARENT D CHILD E
+PARENT E CHILD F
+PARENT F CHILD G1 G2
+PARENT G1 G2 CHILD H

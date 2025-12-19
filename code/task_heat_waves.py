@@ -1,9 +1,15 @@
 import sys
 import pandas as pd
 import os
+import time
  
-def find_heat_waves(input_file, output_file, threshold, min_days): 
+def find_heat_waves(input_file, output_file, threshold, min_days):
+    t_start = time.time()
+
     df = pd.read_csv(input_file)
+
+    t_read = time.time()
+    print(f"Disk I/O (Read) Time: {t_read - t_start:.4f} seconds")
  
     # Parse datetime
     df['datetime'] = pd.to_datetime(
@@ -54,9 +60,7 @@ def find_heat_waves(input_file, output_file, threshold, min_days):
         print(f"\n=== State: {state} ===")
         print(f"Date range: {state_df['date'].min()} to {state_df['date'].max()}")
         print(f"Temp range: {state_df['daily_avg_temp'].min():.2f}°C to {state_df['daily_avg_temp'].max():.2f}°C")
-        print(f"Days with temp >= 35°C: {(state_df['daily_avg_temp'] >= 35.0).sum()}")
-        print(f"Days with temp >= 27°C: {(state_df['daily_avg_temp'] >= 27.0).sum()}")
- 
+
         in_wave = False
         wave_start = 0
  
@@ -92,6 +96,9 @@ def find_heat_waves(input_file, output_file, threshold, min_days):
             wave_df = state_df.loc[wave_start:]
             if len(wave_df) >= min_days:
                 record_wave(state, wave_df)
+
+    t_process = time.time()
+    print(f"Processing Time: {t_process - t_read:.4f} seconds")
  
     # 3) Output (with header even if empty)
     if heat_waves:
@@ -102,10 +109,13 @@ def find_heat_waves(input_file, output_file, threshold, min_days):
         ])
  
     result.to_csv(output_file, index=False)
-    print("Heat wave detection completed.")
+
+    t_end = time.time()
+    print(f"Total Execution Time: {t_end - t_start:.4f} seconds")
+
+    print("\nHeat wave detection completed.")
     print(result)
- 
- 
+
 if __name__ == "__main__":
     THRESHOLD = 35.0
     MIN_DAYS = 3

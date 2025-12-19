@@ -2,6 +2,7 @@ import sys
 import pandas as pd
 import numpy as np
 import os
+import time
 
 def calculate_heat_index(temp_c, humidity):
     """
@@ -52,28 +53,24 @@ def calculate_monthly_heat_index(input_file, output_file):
         input_file: Path to input CSV file
         output_file: Path to output CSV file
     """
+    t_start = time.time()
+
     # Read CSV
     df = pd.read_csv(input_file)
+    t_read = time.time()
+    print(f"Disk I/O (Read) Time: {t_read - t_start:.4f} seconds")
     print(f"Rows after reading CSV: {len(df)}")
     
     # Parse datetime
     df['datetime'] = pd.to_datetime(df['datetime'], errors='coerce')
     df = df.dropna(subset=['datetime'])
-    print(f"Rows after parsing datetime: {len(df)}")
     
     # Drop rows with missing temperature or humidity
     df = df.dropna(subset=['temperature', 'humidity'])
-    print(f"Rows after dropping missing temp/humidity: {len(df)}")
     
     # Extract year and month
     df['year'] = df['datetime'].dt.year
     df['month'] = df['datetime'].dt.month
-
-    print(f"\n=== Data Quality Check ===")
-    print(f"Temperature range: {df['temperature'].min():.2f}°C to {df['temperature'].max():.2f}°C")
-    print(f"Humidity range: {df['humidity'].min():.2f}% to {df['humidity'].max():.2f}%")
-    print(f"Rows with humidity > 100: {(df['humidity'] > 100).sum()}")
-    print(f"Rows with temp > 40°C: {(df['temperature'] > 40).sum()}")
     
     # Calculate heat index for each row
     print("Calculating heat index for all rows...")
@@ -101,9 +98,15 @@ def calculate_monthly_heat_index(input_file, output_file):
     
     # Sort by state, year, month
     monthly_stats = monthly_stats.sort_values(['state', 'year', 'month']).reset_index(drop=True)
+
+    t_process = time.time()
+    print(f"Calculation Time: {t_process - t_read:.4f} seconds")
     
     # Save to CSV
     monthly_stats.to_csv(output_file, index=False)
+
+    t_end = time.time()
+    print(f"Total Execution Time: {t_end - t_start:.4f} seconds")
     
     print(f"\nMonthly heat index calculation completed.")
     print(f"Total records: {len(monthly_stats)}")

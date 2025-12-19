@@ -9,7 +9,7 @@ error  = /mnt/data/use_cases/logs/sort.err
 log    = /mnt/data/use_cases/logs/sort.log
 
 # Resources
-request_cpus   = 1
+request_cpus   = 2
 request_memory = 6G
 
 queue
