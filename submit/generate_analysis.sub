@@ -1,0 +1,15 @@
+# generate_analysis.sub -- Generate final report & combined CSVs
+
+executable = /usr/bin/python3
+arguments = /mnt/data/use_cases/code/generate_analysis.py /mnt/data/use_cases/analysis/ /mnt/data/use_cases/
+
+# Logging
+log    = /mnt/data/use_cases/logs/generate_analysis.log
+output = /mnt/data/use_cases/logs/generate_analysis.out
+error  = /mnt/data/use_cases/logs/generate_analysis.err
+
+# Resources
+request_cpus   = 1
+request_memory = 3G
+
+queue
