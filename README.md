@@ -36,11 +36,8 @@ Start in `/mnt/data/use_cases/` with the raw dataset `full_weather.csv`, all cod
 6. Clean all split data in parallel (`clean_data.sub`[^2] - to run `clean_data.py` on all split CSVs)
    - `weather_<year>_part_<num>.csv` => `clean_<year>_part_<num>.csv`
    - e.g. `weather_2023_part_00.csv` => `clean_2023_part_00.csv`
-
-7. Calculate heat index & detect heat waves (`analysis.sub`[^2] - to run `task_heat_index.py` & `task_heat_waves.py` on all split CSVs)
-   - `clean_<year>_part_<num>.csv` => `heat_index_<year>_part_<num>.csv` & `heat_waves_<year>_part_<num>.csv`
   
-8. ... (TO DO)
+7. ... (TO DO)
   
 [^1]: If running python files manually, ensure it is run in either one of the **Execution Hosts** to have enough RAM and have the necessary import packages
 [^2]: If using .sub files (`condor_submit <file>.sub`), ensure it is run on the **Submission Host**
